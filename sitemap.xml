@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://vetcenter-delta.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/sobre/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/servicos/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/servicos/consulta-veterinaria-presidente-epitacio/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/servicos/vacinacao-pet-presidente-epitacio/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/servicos/diagnostico-por-imagem-veterinario-presidente-epitacio/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/servicos/raio-x-veterinario-presidente-epitacio/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/servicos/banho-e-tosa-presidente-epitacio/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/servicos/emergencia-veterinaria-presidente-epitacio/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/contato/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/cachorro-mancando/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/cachorro-vomitando/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/vacina-v10/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/banho-demais-faz-mal/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/quando-fazer-raio-x/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/diagnostico-por-imagem/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/gato-nao-bebe-agua/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/saude-urinaria-dos-gatos/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/sinais-de-dor-em-gatos/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/vacinacao-felina/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/gripe-felina/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/vacinacao-de-filhotes/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/vacinacao-de-gatos/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/vacina-atrasada/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/mau-halito-em-caes/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/focinho-seco-do-cachorro/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/obesidade-em-caes/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/frequencia-do-banho/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/ressecamento-da-pele/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/limpeza-de-ouvidos/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vetcenter-delta.vercel.app/blog/tosa-higienica/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>

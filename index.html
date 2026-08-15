@@ -1,132 +1,248 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vet Center Presidente Epitácio - Clínica e Pet Shop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VetCenter | Clínica Veterinária em Presidente Epitácio</title>
+  <meta name="description" content="Clínica veterinária em Presidente Epitácio para cães e gatos. Consultas, vacinação, diagnóstico por imagem, Raio-X Digital, banho e tosa e mais.">
+  <link rel="canonical" href="https://vetcenter-delta.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VetCenter | Clínica Veterinária em Presidente Epitácio">
+  <meta property="og:description" content="Clínica veterinária em Presidente Epitácio para cães e gatos. Consultas, vacinação, diagnóstico por imagem, Raio-X Digital, banho e tosa e mais.">
+  <meta property="og:url" content="https://vetcenter-delta.vercel.app/">
+  <meta property="og:image" content="https://vetcenter-delta.vercel.app/img/hero-home-1024.webp">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="VetCenter">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/business-config.js" defer></script>
+  <script src="/site-components.js" defer></script>
+  <link rel="preload" as="image" href="/img/hero-home-1024.webp" imagesrcset="/img/hero-home-720.webp 720w, /img/hero-home-1024.webp 1024w, /img/hero-home-1400.webp 1400w" imagesizes="(max-width: 880px) 92vw, 46vw">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon"></div>
-                </a>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" class="active">Início</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </nav>
-                <a href="https://wa.me/551832811035" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Fale no WhatsApp
-                </a>
-            </div>
-        </div>
-    </header>
+  <div id="site-header" data-current="home"></div>
 
+  <main>
+    <!-- HERO -->
     <section class="hero">
-        <!-- Floating decorative elements -->
-        <i class="fas fa-paw floating-paw paw-1"></i>
-        <i class="fas fa-paw floating-paw paw-2"></i>
-        <i class="fas fa-paw floating-paw paw-3"></i>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Sua Clínica Veterinária e Pet Shop de Excelência</h1>
-                    <p>O centro completo para o bem-estar do seu pet em Presidente Epitácio. Desde atendimentos clínicos e cirúrgicos especializados até o melhor em estética animal, banho, tosa e produtos premium para o seu melhor amigo.</p>
-                    <div class="hero-actions">
-                        <a href="contato.html" class="btn-primary">
-                            <i class="fab fa-whatsapp"></i> Agendar Consulta
-                        </a>
-                        <a href="servicos.html" class="btn-outline">Nossos Serviços</a>
-                    </div>
-                </div>
-                <div class="hero-image-wrapper">
-                    <div class="hero-blob">
-                        <img src="img/banner-home.png" alt="Cachorro e Gato no Vet Center">
-                    </div>
-                </div>
-            </div>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="hero-eyebrow"><span class="dot"></span> Clínica Veterinária em Presidente Epitácio</span>
+          <h1>Clínica Veterinária em Presidente Epitácio para cuidar de cães e gatos</h1>
+          <p class="lead">Consultas, vacinação, diagnóstico por imagem, Raio-X Digital, banho e tosa e cuidados veterinários em um só lugar.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/contato/index.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Agendar atendimento</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=VetCenter+Presidente+Epit%C3%A1cio" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Como chegar</a>
+          </div>
+          <p class="hero-note">R. Fortaleza, 10-51 · Centro · Presidente Epitácio · SP · (18) 3281-1035</p>
         </div>
+        <div class="hero-media">
+          <img
+            src="/img/hero-home-1024.webp"
+            srcset="/img/hero-home-720.webp 720w, /img/hero-home-1024.webp 1024w, /img/hero-home-1400.webp 1400w"
+            sizes="(max-width: 880px) 92vw, 46vw"
+            alt="Equipe da VetCenter cuidando de um cão e um gato em Presidente Epitácio"
+            width="1024" height="768" fetchpriority="high">
+          <div class="hero-badge">
+            <div>
+              <span class="stars">★★★★★</span>
+              <span class="num">4,8</span>
+              <small>no Google · mais de 70 avaliações</small>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Resumo de Serviços -->
-    <section class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>O que oferecemos</h2>
-                <p>Nossos principais serviços para o seu pet</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-stethoscope"></i></div>
-                    <h3>Consultas</h3>
-                    <p>Nossas consultas veterinárias são conduzidas por profissionais experientes.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-cut"></i></div>
-                    <h3>Banho e Tosa</h3>
-                    <p>Proporcione ao seu pet tratamentos estéticos que vão além da beleza.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-ambulance"></i></div>
-                    <h3>Atendimento 24h</h3>
-                    <p>Disponível 24 horas por dia, nosso serviço de emergência está sempre pronto.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-shopping-bag"></i></div>
-                    <h3>Pet Shop</h3>
-                    <p>Visite nossa loja para encontrar uma seleção completa de produtos.</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="servicos.html" class="btn-primary" style="display: inline-block; width: auto;">Ver todos os serviços</a>
-            </div>
+    <!-- PROVA SOCIAL -->
+    <section class="proof-strip">
+      <div class="container proof-inner">
+        <div class="proof-item">
+          <div class="stars">★★★★★</div>
+          <div class="value">4,8 no Google</div>
+          <div class="label">avaliação média de clientes</div>
         </div>
+        <div class="proof-item">
+          <div class="value">+70</div>
+          <div class="label">avaliações no Google</div>
+        </div>
+        <div class="proof-item">
+          <div class="value">Presidente Epitácio</div>
+          <div class="label">atendimento local, no Centro</div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <a href="index.html" class="logo">
-                        <div class="logo-icon"></div>
-                    </a>
-                    <p>Clínica Veterinária, Cirurgias, Exames, Vacinas, Pet Shop, Banho e Tosa, Estética Animal.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li><i class="fas fa-phone" style="color:var(--secondary); margin-right:5px;"></i> (18) 3281-1035</li>
-                        <li><i class="fas fa-map-marker-alt" style="color:var(--secondary); margin-right:5px;"></i> R. Fortaleza, 10-51</li>
-                        <li>Centro, Pres. Epitácio - SP</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Vet Center - Presidente Epitácio. Todos os direitos reservados.</p>
-            </div>
+    <!-- SERVIÇOS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Nossos serviços</span>
+          <h2>Cuidado veterinário completo para cães e gatos</h2>
+          <p>A VetCenter reúne saúde, prevenção, diagnóstico e bem-estar em um só lugar no Centro de Presidente Epitácio.</p>
         </div>
-    </footer>
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></div>
+            <h3>Consulta Veterinária</h3>
+            <p>Avaliação e acompanhamento da saúde de cães e gatos.</p>
+            <a class="card-link" href="/servicos/consulta-veterinaria-presidente-epitacio/index.html">Conhecer <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-syringe" aria-hidden="true"></i></div>
+            <h3>Vacinação</h3>
+            <p>Prevenção e acompanhamento do protocolo vacinal.</p>
+            <a class="card-link" href="/servicos/vacinacao-pet-presidente-epitacio/index.html">Conhecer <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-x-ray" aria-hidden="true"></i></div>
+            <h3>Diagnóstico por Imagem</h3>
+            <p>Recursos de imagem para auxiliar a investigação veterinária.</p>
+            <a class="card-link" href="/servicos/diagnostico-por-imagem-veterinario-presidente-epitacio/index.html">Conhecer <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-truck-medical" aria-hidden="true"></i></div>
+            <h3>Atendimento de Emergência</h3>
+            <p>Orientação para situações que exigem avaliação veterinária rápida.</p>
+            <a class="card-link" href="/servicos/emergencia-veterinaria-presidente-epitacio/index.html">Conhecer <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-scissors" aria-hidden="true"></i></div>
+            <h3>Banho e Tosa</h3>
+            <p>Cuidados com higiene, pele e pelagem.</p>
+            <a class="card-link" href="/servicos/banho-e-tosa-presidente-epitacio/index.html">Conhecer <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></div>
+            <h3>Pet Shop</h3>
+            <p>Produtos e cuidados para o dia a dia dos pets.</p>
+            <a class="card-link" href="/contato/index.html">Falar com a VetCenter <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <a href="https://wa.me/551832811035" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- DIAGNÓSTICO POR IMAGEM (DESTAQUE) -->
+    <section class="section section-soft">
+      <div class="container feature">
+        <div class="feature-media">
+          <img src="/img/hero-home-1024.webp" alt="Diagnóstico por imagem veterinário na VetCenter em Presidente Epitácio" loading="lazy" width="1024" height="768">
+        </div>
+        <div>
+          <span class="kicker">Diferencial</span>
+          <h2>Diagnóstico por imagem veterinário em Presidente Epitácio</h2>
+          <p class="lead-text">A VetCenter conta com recursos de diagnóstico por imagem para auxiliar o médico-veterinário na investigação e acompanhamento da saúde de cães e gatos.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="f-icon"><i class="fa-solid fa-x-ray" aria-hidden="true"></i></div>
+              <div>
+                <h3>Raio-X Digital</h3>
+                <p>Exame de imagem utilizado para auxiliar a avaliação de diferentes estruturas do organismo.</p>
+              </div>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="/servicos/diagnostico-por-imagem-veterinario-presidente-epitacio/index.html">Conhecer diagnóstico por imagem</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMERGÊNCIA -->
+    <section class="section emergency">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker" style="color:rgba(255,255,255,.9)">Emergência</span>
+          <h2>Seu pet precisa de avaliação com urgência?</h2>
+          <p>Em situações que exigem avaliação veterinária rápida, entre em contato com a VetCenter para verificar o atendimento disponível.</p>
+        </div>
+        <div style="text-align:center">
+          <a class="btn btn-emergency" href="tel:+551832811035"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ligar para emergência</a>
+        </div>
+        <p class="emergency-note">(18) 3281-1035 · verifique a disponibilidade de atendimento</p>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section">
+      <div class="container feature">
+        <div>
+          <span class="kicker">A VetCenter</span>
+          <h2>Uma clínica veterinária no Centro de Presidente Epitácio</h2>
+          <p class="lead-text">A VetCenter é uma clínica veterinária localizada no Centro de Presidente Epitácio, São Paulo. A clínica atende cães e gatos.</p>
+          <p>A VetCenter reúne atendimento veterinário, vacinação, diagnóstico por imagem, banho e tosa e cuidados para cães e gatos. Um espaço para cuidar da saúde e do bem-estar do seu pet.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="f-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></div>
+              <div><h3>Saúde e prevenção</h3><p>Consulta veterinária, vacinação, acompanhamento e prevenção.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="f-icon"><i class="fa-solid fa-x-ray" aria-hidden="true"></i></div>
+              <div><h3>Diagnóstico</h3><p>Raio-X Digital e diagnóstico por imagem para auxiliar o veterinário.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="f-icon"><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i></div>
+              <div><h3>Bem-estar</h3><p>Banho e tosa e Pet Shop para o dia a dia dos pets.</p></div>
+            </div>
+          </div>
+          <a class="btn btn-outline" href="/sobre/index.html">Conhecer a VetCenter</a>
+        </div>
+        <div class="feature-media">
+          <img src="/img/hero-home-1400.webp" alt="Estrutura da clínica veterinária VetCenter em Presidente Epitácio" loading="lazy" width="1400" height="1050">
+        </div>
+      </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Avaliações</span>
+          <h2>Quem cuida, recomenda</h2>
+          <p>Avaliações reais de clientes da VetCenter no Google.</p>
+        </div>
+        <div class="review-summary">
+          <span class="big">4,8</span>
+          <span class="stars">★★★★★</span>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Ótimo atendimento, e recepção dos pets nota ótimo veterinário."</p>
+            <div class="who">Rogerio Quirino <span>· Google</span></div>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Excelentes profissionais, Dr Danilo e toda equipe sempre muito atenciosos."</p>
+            <div class="who">Thiago Ferreira <span>· Google</span></div>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Todos meus animais quando precisam do banho/tosa ou atendimento veterinário levo."</p>
+            <div class="who">Heidi Christine Brand de Castro <span>· Google</span></div>
+          </article>
+        </div>
+        <div style="text-align:center; margin-top:36px">
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=VetCenter+Presidente+Epit%C3%A1cio" target="_blank" rel="noopener"><i class="fa-brands fa-google" aria-hidden="true"></i> Ver avaliações no Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Agende o atendimento do seu pet</h2>
+          <p>Entre em contato com a VetCenter em Presidente Epitácio para consultas, vacinação, banho e tosa e mais.</p>
+          <a class="btn btn-white" href="tel:+551832811035"><i class="fa-solid fa-phone" aria-hidden="true"></i> (18) 3281-1035</a>
+          <a class="btn btn-white" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.6)" href="/contato/index.html">Falar com a VetCenter</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
 </body>
 </html>
