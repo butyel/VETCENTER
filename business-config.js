@@ -20,28 +20,27 @@ window.VETCENTER_CONFIG = {
     state: "SP",
     postalCode: "19470-043",
     full: "R. Fortaleza, 10-51 - Centro, Presidente Epitácio - SP, 19470-043",
-    // latitude/longitude NÃO confirmados — mantidos nulos
-    lat: null,
-    lng: null
+    // Coordenadas confirmadas pelo cliente
+    lat: -21.76723633679676,
+    lng: -52.11200564078367
   },
 
-  /* --- Contato --- */
+  /* --- Contato (confirmado) --- */
   phone: {
     display: "(18) 3281-1035",
     tel: "+551832811035",
-    // WhatsApp NÃO confirmado — não usar wa.me até confirmação
-    whatsapp: null,
-    whatsappDisplay: null,
-    // Número de emergência NÃO confirmado de forma oficial — mantido nulo
-    emergency: null,
-    emergencyDisplay: null
+    // WhatsApp confirmado: (18) 98174-5375
+    whatsapp: "+5518981745375",
+    whatsappDisplay: "(18) 98174-5375",
+    // Emergência confirmada: (18) 98174-5375
+    emergency: "+5518981745375",
+    emergencyDisplay: "(18) 98174-5375"
   },
 
-  /* --- E-mail (NÃO confirmado) --- */
+  /* --- E-mail (confirmado) --- */
   email: {
-    // contato@vetcenter.com.br NÃO confirmado — não exibir
-    address: null,
-    display: null
+    address: "contato@vetcenter.com.br",
+    display: "contato@vetcenter.com.br"
   },
 
   /* --- Horário de funcionamento (regular) --- */
@@ -58,16 +57,16 @@ window.VETCENTER_CONFIG = {
   reviews: {
     rating: "4,8",
     count: "Mais de 70 avaliações",
-    googleUrl: "https://www.google.com/maps/search/?api=1&query=VetCenter+Presidente+Epit%C3%A1cio",
+    googleUrl: "https://g.page/r/CS8i_YLsyWNtEBM/review",
     label: "Ver avaliações no Google"
   },
 
-  /* --- Redes sociais (apenas oficiais/confirmadas) --- */
+  /* --- Redes sociais (oficiais/confirmadas) --- */
   social: {
-    instagram: null,
-    facebook: null,
-    // URL de negócio no Google — placeholder, confirmar com cliente
-    googleBusiness: null
+    instagram: "https://www.instagram.com/vetcenter_epi/",
+    facebook: "https://www.facebook.com/vetcenteEpi",
+    // URL de negócio/perfil no Google
+    googleBusiness: "https://g.page/r/CS8i_YLsyWNtEBM/review"
   },
 
   /* --- Serviços confirmados --- */

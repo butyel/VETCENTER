@@ -39,10 +39,14 @@
 
   function renderFooter() {
     var phoneLink = '<a href="tel:' + C.phone.tel + '">' + C.phone.display + "</a>";
+    var waLink = "";
+    if (C.phone.whatsapp) waLink = '<li>WhatsApp: <a href="https://wa.me/' + C.phone.whatsapp.replace(/\D/g, "") + '" target="_blank" rel="noopener">' + C.phone.whatsappDisplay + "</a></li>";
+    var emailLi = "";
+    if (C.email.address) emailLi = '<li>E-mail: <a href="mailto:' + C.email.address + '">' + C.email.display + "</a></li>";
     var social = "";
-    if (C.social.instagram) social += '<a href="' + C.social.instagram + '" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span class="visually-hidden">Instagram</span></a>';
-    if (C.social.facebook) social += '<a href="' + C.social.facebook + '" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i><span class="visually-hidden">Facebook</span></a>';
-    if (C.social.googleBusiness) social += '<a href="' + C.social.googleBusiness + '" target="_blank" rel="noopener"><i class="fa-brands fa-google" aria-hidden="true"></i><span class="visually-hidden">Google</span></a>';
+    if (C.social.instagram) social += '<a href="' + C.social.instagram + '" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span class="visually-hidden">Instagram</span></a>';
+    if (C.social.facebook) social += '<a href="' + C.social.facebook + '" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i><span class="visually-hidden">Facebook</span></a>';
+    if (C.social.googleBusiness) social += '<a href="' + C.social.googleBusiness + '" target="_blank" rel="noopener" aria-label="Google"><i class="fa-brands fa-google" aria-hidden="true"></i><span class="visually-hidden">Google</span></a>';
 
     var html =
       '<footer class="site-footer">' +
@@ -77,6 +81,8 @@
       "<ul>" +
       '<li class="footer-nap"><strong>' + C.name + "</strong><br>" + C.address.street + "<br>" + C.address.district + ", " + C.address.city + " - " + C.address.state + "<br>CEP " + C.address.postalCode + "</li>" +
       '<li>Telefone: ' + phoneLink + "</li>" +
+      waLink +
+      emailLi +
       "<li>Horário: " + C.openingHours.text + "</li>" +
       "</ul>" +
       "</div>" +
@@ -98,6 +104,7 @@
       "logo": C.baseUrl + "/img/logo.png",
       "description": C.type + " Atendemos cães e gatos em Presidente Epitácio, São Paulo.",
       "telephone": C.phone.tel,
+      "email": C.email.address,
       "address": {
         "@type": "PostalAddress",
         "streetAddress": C.address.street,
@@ -106,12 +113,21 @@
         "postalCode": C.address.postalCode,
         "addressCountry": "BR"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": C.address.lat,
+        "longitude": C.address.lng
+      },
       "openingHoursSpecification": C.openingHours.spec.map(function (s) {
         return { "@type": "OpeningHoursSpecification", "dayOfWeek": s.days, "opens": s.opens, "closes": s.closes };
       }),
       "areaServed": C.address.city
     };
-    if (C.social.googleBusiness) localBusiness.sameAs = [C.social.googleBusiness];
+    var sameAs = [];
+    if (C.social.instagram) sameAs.push(C.social.instagram);
+    if (C.social.facebook) sameAs.push(C.social.facebook);
+    if (C.social.googleBusiness) sameAs.push(C.social.googleBusiness);
+    if (sameAs.length) localBusiness.sameAs = sameAs;
 
     var script = document.createElement("script");
     script.type = "application/ld+json";
