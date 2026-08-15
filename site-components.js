@@ -18,12 +18,25 @@
       navLink("Início", C.baseUrl + "/index.html", current === "home") +
       navLink("A VetCenter", C.baseUrl + "/sobre/index.html", current === "sobre") +
       navLink("Serviços", C.baseUrl + "/servicos/index.html", current === "servicos") +
-      navLink("Diagnóstico por Imagem", C.baseUrl + "/servicos/diagnostico-por-imagem-veterinario-presidente-epitacio/index.html", current === "diagnostico") +
-      navLink("Banho e Tosa", C.baseUrl + "/servicos/banho-e-tosa-presidente-epitacio/index.html", current === "banho") +
       navLink("Conteúdos", C.baseUrl + "/blog/index.html", current === "blog") +
       navLink("Contato", C.baseUrl + "/contato/index.html", current === "contato");
 
+    var topRight = "";
+    if (C.phone.whatsapp) topRight += '<a href="https://wa.me/' + C.phone.whatsapp.replace(/\D/g, "") + '" target="_blank" rel="noopener" class="top-link"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>';
+    if (C.social.instagram) topRight += '<a href="' + C.social.instagram + '" target="_blank" rel="noopener" class="top-link top-social" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>';
+    if (C.social.facebook) topRight += '<a href="' + C.social.facebook + '" target="_blank" rel="noopener" class="top-link top-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>';
+
     var html =
+      '<div class="topbar">' +
+      '<div class="container topbar-inner">' +
+      '<span class="top-item"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> ' + C.address.street + ', Centro, ' + C.address.city + ' - ' + C.address.state + '</span>' +
+      '<span class="top-item"><i class="fa-solid fa-clock" aria-hidden="true"></i> ' + C.openingHours.short + '</span>' +
+      '<span class="top-actions">' +
+      '<a href="tel:' + C.phone.tel + '" class="top-link"><i class="fa-solid fa-phone" aria-hidden="true"></i> ' + C.phone.display + '</a>' +
+      topRight +
+      '</span>' +
+      '</div>' +
+      '</div>' +
       '<header class="site-header" id="site-header">' +
       '<div class="container header-inner">' +
       '<a class="brand" href="' + C.baseUrl + '/index.html" aria-label="' + C.name + ' — Clínica Veterinária em Presidente Epitácio">' +
