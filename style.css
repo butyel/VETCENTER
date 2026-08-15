@@ -124,6 +124,100 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
+/* ---------- Pets mini-nav (microinteração Cachorros/Gatos) ---------- */
+.pets-nav {
+  display: inline-flex; align-items: center; gap: 2px;
+  margin: 0 4px; padding-right: 30px; flex-shrink: 0;
+}
+.pets-item {
+  position: relative; display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 12px; border-radius: 999px;
+  color: var(--ink-700); font-weight: 600; font-size: .92rem;
+  transition: background .18s ease, color .18s ease;
+}
+.pets-item:hover, .pets-item:focus-visible { background: var(--green-100); color: var(--green-900); text-decoration: none; }
+
+/* Espaço reservado do personagem (posicionamento absoluto => CLS zero) */
+.pets-mascot {
+  position: absolute; top: 50%; right: -34px; transform: translateY(-50%);
+  width: 30px; height: 30px; pointer-events: none;
+  opacity: 0; scale: .6;
+  transition: opacity .22s ease, scale .22s cubic-bezier(.34,1.56,.64,1);
+  will-change: transform;
+}
+.pets-mascot svg { width: 30px; height: 30px; display: block; overflow: visible; }
+
+/* Hover / foco: personagem aparece e executa a microanimação uma vez */
+.pets-item:hover .pets-mascot,
+.pets-item:focus-visible .pets-mascot {
+  opacity: 1; scale: 1;
+}
+.pets-item:hover .pets-mascot svg,
+.pets-item:focus-visible .pets-mascot svg {
+  animation: mascot-pop .5s cubic-bezier(.34,1.56,.64,1) .05s both;
+}
+
+/* Blink (olhos fecham e abrem) */
+.pets-item:hover .dog-eye,
+.pets-item:hover .cat-eye,
+.pets-item:focus-visible .dog-eye,
+.pets-item:focus-visible .cat-eye {
+  animation: pet-blink .5s ease .22s 1;
+  transform-box: fill-box; transform-origin: center;
+}
+
+/* Orelha do cachorro: leve inclinação */
+.pets-item:hover .dog-ear.ear-r,
+.pets-item:focus-visible .dog-ear.ear-r {
+  animation: ear-tilt .6s ease .22s 1;
+  transform-box: fill-box; transform-origin: center bottom;
+}
+
+/* Orelha do gato: leve tremida discreta */
+.pets-item:hover .cat-ear.ear-l,
+.pets-item:focus-visible .cat-ear.ear-l {
+  animation: cat-ear .6s ease .22s 1;
+  transform-box: fill-box; transform-origin: center bottom;
+}
+
+@keyframes mascot-pop {
+  0% { transform: translateY(50%) scale(.4); }
+  60% { transform: translateY(-10%) scale(1.06); }
+  100% { transform: translateY(-14%) scale(1); }
+}
+@keyframes pet-blink {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(.12); }
+}
+@keyframes ear-tilt {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(-14deg); }
+  70% { transform: rotate(8deg); }
+}
+@keyframes cat-ear {
+  0%, 100% { transform: rotate(0deg); }
+  35% { transform: rotate(-10deg); }
+  60% { transform: rotate(6deg); }
+}
+
+/* Touch / mobile: mostra o personagem estático, sem depender de hover */
+@media (hover: none) {
+  .pets-mascot { position: static; transform: none; opacity: 1; scale: 1; transition: none; }
+  .pets-mascot svg { animation: none !important; }
+  .pets-item:hover .pets-mascot svg,
+  .pets-item:focus-visible .pets-mascot svg { animation: none !important; }
+}
+
+/* Reduced motion: personagem aparece estaticamente (sem animação), sem quebrar navegação */
+@media (prefers-reduced-motion: reduce) {
+  .pets-mascot { transition: none; }
+  .pets-item:hover .pets-mascot,
+  .pets-item:focus-visible .pets-mascot { opacity: 1; scale: 1; }
+  .pets-item:hover .pets-mascot svg,
+  .pets-item:focus-visible .pets-mascot svg,
+  .pets-mascot svg { animation: none !important; }
+}
+
 /* ---------- Hero ---------- */
 .hero { position: relative; padding: clamp(40px, 6vw, 90px) 0; background: linear-gradient(180deg, var(--green-100) 0%, var(--bg) 100%); overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; position: relative; z-index: 2; }
@@ -328,6 +422,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: var(--green-800); color: var(--white); font-weight: 700; padding: 15px; font-size: 1.05rem;
 }
 .call-bar:hover { color: var(--white); text-decoration: none; }
+
+@media (max-width: 1100px) {
+  .pets-nav { display: none; }
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {

@@ -26,6 +26,18 @@
     if (C.social.instagram) topRight += '<a href="' + C.social.instagram + '" target="_blank" rel="noopener" class="top-link top-social" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>';
     if (C.social.facebook) topRight += '<a href="' + C.social.facebook + '" target="_blank" rel="noopener" class="top-link top-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>';
 
+    var pets =
+      '<nav class="pets-nav" aria-label="Animais que atendemos">' +
+      '<a class="pets-item pets-dog" href="' + C.baseUrl + '/servicos/index.html">' +
+      '<span class="pets-text">Cachorros</span>' +
+      '<span class="pets-mascot" aria-hidden="true">' + dogSvg() + "</span>" +
+      "</a>" +
+      '<a class="pets-item pets-cat" href="' + C.baseUrl + '/servicos/index.html">' +
+      '<span class="pets-text">Gatos</span>' +
+      '<span class="pets-mascot" aria-hidden="true">' + catSvg() + "</span>" +
+      "</a>" +
+      "</nav>";
+
     var html =
       '<div class="topbar">' +
       '<div class="container topbar-inner">' +
@@ -44,10 +56,39 @@
       "</a>" +
       '<button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>' +
       '<nav class="primary-nav" id="primary-nav" aria-label="Navegação principal"><ul>' + links + "</ul></nav>" +
+      pets +
       '<a class="btn btn-primary btn-header" href="' + C.baseUrl + '/contato/index.html">Agendar atendimento</a>' +
       "</div>" +
       "</header>";
     return html;
+  }
+
+  function dogSvg() {
+    return (
+      '<svg viewBox="0 0 64 64" width="30" height="30" focusable="false">' +
+      '<g class="dog-ear ear-l"><path d="M16 26 C13 12 22 7 27 10 C30 12 29 18 28 22 Z" fill="#148CC8"/></g>' +
+      '<g class="dog-ear ear-r"><path d="M48 26 C51 12 42 7 37 10 C34 12 35 18 36 22 Z" fill="#148CC8"/></g>' +
+      '<path d="M12 32 C12 18 22 13 32 13 C42 13 52 18 52 32 C52 48 42 56 32 56 C22 56 12 48 12 32 Z" fill="#ffffff" stroke="#148CC8" stroke-width="3"/>' +
+      '<g class="dog-eye eye-l"><ellipse cx="24" cy="34" rx="3.2" ry="4.4" fill="#16211b"/></g>' +
+      '<g class="dog-eye eye-r"><ellipse cx="40" cy="34" rx="3.2" ry="4.4" fill="#16211b"/></g>' +
+      '<path d="M32 40 Q32 44 34.5 44 Q37 44 37 40 Z" fill="#DC283C"/>' +
+      '<path d="M26 48 Q32 51 38 48" fill="none" stroke="#148CC8" stroke-width="2.4" stroke-linecap="round"/>' +
+      "</svg>"
+    );
+  }
+
+  function catSvg() {
+    return (
+      '<svg viewBox="0 0 64 64" width="30" height="30" focusable="false">' +
+      '<g class="cat-ear ear-l"><path d="M16 30 L12 14 L28 22 Z" fill="#148CC8"/></g>' +
+      '<g class="cat-ear ear-r"><path d="M48 30 L52 14 L36 22 Z" fill="#148CC8"/></g>' +
+      '<path d="M12 32 C12 18 22 13 32 13 C42 13 52 18 52 32 C52 48 42 56 32 56 C22 56 12 48 12 32 Z" fill="#ffffff" stroke="#16211b" stroke-width="3"/>' +
+      '<g class="cat-eye eye-l"><ellipse cx="24" cy="34" rx="3.4" ry="4.6" fill="#16211b"/></g>' +
+      '<g class="cat-eye eye-r"><ellipse cx="40" cy="34" rx="3.4" ry="4.6" fill="#16211b"/></g>' +
+      '<path d="M30 41 Q32 39 34 41" fill="none" stroke="#DC283C" stroke-width="2.4" stroke-linecap="round"/>' +
+      '<path d="M28 49 Q32 45 36 49" fill="none" stroke="#16211b" stroke-width="2.4" stroke-linecap="round"/>' +
+      "</svg>"
+    );
   }
 
   function renderFooter() {
