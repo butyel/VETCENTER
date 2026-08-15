@@ -215,7 +215,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .card::before {
   content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 0%;
-  background: linear-gradient(135deg, var(--green-800) 0%, var(--green-400) 100%);
+  background: linear-gradient(135deg, var(--green-800) 0%, var(--green-600) 100%);
   transition: all .4s ease; z-index: -1; border-radius: var(--radius-lg);
 }
 .card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
@@ -233,6 +233,15 @@ ul { margin: 0; padding: 0; list-style: none; }
 .card .card-link { margin-top: 16px; font-weight: 700; color: var(--green-800); font-size: .95rem; display: inline-flex; align-items: center; gap: 6px; }
 .card .card-link:hover { color: var(--green-900); text-decoration: none; gap: 10px; }
 .card:hover .card-link:hover { color: var(--white); }
+
+/* Cores variadas no hover dos cards de serviços (uma por card, no padrão do topbar) */
+.grid .card:nth-child(1):hover::before { background: linear-gradient(135deg, var(--nav-active-1), #a3142e); }
+.grid .card:nth-child(2):hover::before { background: linear-gradient(135deg, var(--nav-active-2), #0e6a8f); }
+.grid .card:nth-child(3):hover::before { background: linear-gradient(135deg, var(--nav-active-3), #a53c22); }
+.grid .card:nth-child(4):hover::before { background: linear-gradient(135deg, var(--nav-active-4), #2f7a2c); }
+.grid .card:nth-child(5):hover::before { background: linear-gradient(135deg, var(--nav-active-1), #a3142e); }
+.grid .card:nth-child(6):hover::before { background: linear-gradient(135deg, var(--nav-active-2), #0e6a8f); }
+.grid .card:nth-child(n+7):hover::before { background: linear-gradient(135deg, var(--green-800), var(--green-600)); }
 
 /* ---------- Feature (highlight) ---------- */
 .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
