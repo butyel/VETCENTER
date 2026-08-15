@@ -16,6 +16,8 @@
   --green-100: #e7f4ec;
   --blue-600: #148CC8;   /* azul da marca */
   --blue-100: #e3f2fa;
+  --orange-600: #E06030; /* laranja da marca (destaque) */
+  --orange-100: #fdeee6;
   --red-600: #DC283C;    /* vermelho quente (emergência) */
   --red-100: #fdecee;
 
@@ -80,10 +82,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   cursor: pointer; transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
   text-align: center;
 }
-.btn-primary { background: var(--green-800); color: var(--white); box-shadow: var(--shadow-sm); }
-.btn-primary:hover { background: var(--green-600); color: var(--white); transform: translateY(-2px); box-shadow: var(--shadow-md); text-decoration: none; }
-.btn-accent { background: var(--red-600); color: var(--white); box-shadow: var(--shadow-sm); }
-.btn-accent:hover { background: var(--red-600); color: var(--white); transform: translateY(-2px); box-shadow: var(--shadow-md); text-decoration: none; }
+.btn-primary {
+  background: linear-gradient(135deg, var(--green-800) 0%, var(--blue-600) 100%);
+  color: var(--white); box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover { background: linear-gradient(135deg, var(--green-600) 0%, var(--blue-600) 100%); color: var(--white); transform: translateY(-2px); box-shadow: var(--shadow-md); text-decoration: none; }
+.btn-accent { background: linear-gradient(135deg, var(--red-600) 0%, #b51f31 100%); color: var(--white); box-shadow: var(--shadow-sm); }
+.btn-accent:hover { background: linear-gradient(135deg, var(--red-600) 0%, #b51f31 100%); color: var(--white); transform: translateY(-2px); box-shadow: var(--shadow-md); text-decoration: none; }
 .btn-outline { border-color: var(--green-800); color: var(--green-800); background: transparent; }
 .btn-outline:hover { background: var(--green-100); color: var(--green-900); transform: translateY(-2px); text-decoration: none; }
 .btn-block { width: 100%; }
@@ -244,7 +249,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .review-card .who span { font-weight: 500; color: var(--ink-500); }
 
 /* ---------- CTA band ---------- */
-.cta-band { background: var(--green-800); color: var(--white); border-radius: var(--radius-lg); padding: clamp(32px, 5vw, 56px); text-align: center; box-shadow: var(--shadow-lg); }
+.cta-band { background: linear-gradient(135deg, var(--green-800) 0%, var(--blue-600) 100%); color: var(--white); border-radius: var(--radius-lg); padding: clamp(32px, 5vw, 56px); text-align: center; box-shadow: var(--shadow-lg); }
 .cta-band h2 { color: var(--white); }
 .cta-band p { color: rgba(255,255,255,.9); max-width: 40em; margin: 0 auto 26px; }
 .cta-band .btn-white { background: var(--white); color: var(--green-800); }
