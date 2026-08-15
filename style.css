@@ -125,8 +125,21 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
 /* ---------- Hero ---------- */
-.hero { padding: clamp(40px, 6vw, 90px) 0; background: linear-gradient(180deg, var(--green-100) 0%, var(--bg) 100%); }
-.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+.hero { position: relative; padding: clamp(40px, 6vw, 90px) 0; background: linear-gradient(180deg, var(--green-100) 0%, var(--bg) 100%); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; position: relative; z-index: 2; }
+
+/* Patinhas flutuantes decorativas */
+.floating-paw { position: absolute; color: var(--green-600); opacity: .14; z-index: 1; animation: float 4s ease-in-out infinite; pointer-events: none; }
+.paw-1 { top: 150px; left: 6%; font-size: 40px; animation-delay: 0s; transform: rotate(-20deg); }
+.paw-2 { bottom: 120px; right: 42%; font-size: 60px; animation-delay: 1s; transform: rotate(15deg); }
+.paw-3 { top: 260px; right: 5%; font-size: 35px; animation-delay: 2s; transform: rotate(45deg); }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+@media (max-width: 880px) { .floating-paw { display: none; } }
 .hero h1 { font-size: clamp(2.1rem, 4.5vw, 3.4rem); font-weight: 800; letter-spacing: -0.5px; color: var(--green-900); }
 .hero .lead { font-size: clamp(1.08rem, 1.6vw, 1.25rem); color: var(--ink-500); max-width: 32em; }
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--green-800); background: var(--white); border: 1px solid var(--green-400); padding: 8px 14px; border-radius: 999px; font-size: .9rem; margin-bottom: 20px; }
@@ -136,7 +149,16 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero-media { position: relative; }
 .hero-media img {
   width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center;
-  border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  box-shadow: var(--shadow-lg);
+  border: 8px solid var(--white);
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
 }
 .hero-badge {
   position: absolute; left: -14px; bottom: -14px; background: var(--white);
@@ -169,17 +191,29 @@ ul { margin: 0; padding: 0; list-style: none; }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 .card {
   background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg);
-  padding: 30px; transition: transform .2s ease, box-shadow .2s ease;
+  padding: 30px; transition: transform .4s cubic-bezier(.175,.885,.32,1.275), box-shadow .4s ease;
+  position: relative; overflow: hidden; z-index: 1;
 }
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 0%;
+  background: linear-gradient(135deg, var(--green-800) 0%, var(--green-400) 100%);
+  transition: all .4s ease; z-index: -1; border-radius: var(--radius-lg);
+}
+.card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+.card:hover::before { height: 100%; }
+.card:hover h3, .card:hover p, .card:hover .card-link { color: var(--white); }
+.card:hover .card-link { color: var(--white); }
 .card .icon {
   width: 54px; height: 54px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
   font-size: 1.4rem; color: var(--green-800); background: var(--green-100); margin-bottom: 18px;
+  transition: all .4s ease;
 }
+.card:hover .icon { background: var(--white); color: var(--green-800); transform: scale(1.08); }
 .card h3 { font-size: 1.25rem; margin-bottom: 8px; }
 .card p { color: var(--ink-500); font-size: .98rem; margin-bottom: 0; }
 .card .card-link { margin-top: 16px; font-weight: 700; color: var(--green-800); font-size: .95rem; display: inline-flex; align-items: center; gap: 6px; }
 .card .card-link:hover { color: var(--green-900); text-decoration: none; gap: 10px; }
+.card:hover .card-link:hover { color: var(--white); }
 
 /* ---------- Feature (highlight) ---------- */
 .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }

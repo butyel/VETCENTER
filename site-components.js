@@ -154,8 +154,24 @@
     if (headerEl) headerEl.outerHTML = renderHeader(headerEl.getAttribute("data-current") || "");
     if (footerEl) footerEl.outerHTML = renderFooter();
     renderSchema();
+    injectPaws();
     initNav();
   });
+
+  function injectPaws() {
+    var hero = qs("main .hero");
+    if (!hero || hero.querySelector(".floating-paw")) return;
+    var paws =
+      '<i class="fa-solid fa-paw floating-paw paw-1" aria-hidden="true"></i>' +
+      '<i class="fa-solid fa-paw floating-paw paw-2" aria-hidden="true"></i>' +
+      '<i class="fa-solid fa-paw floating-paw paw-3" aria-hidden="true"></i>';
+    var holder = document.createElement("div");
+    holder.setAttribute("aria-hidden", "true");
+    holder.innerHTML = paws;
+    hero.insertBefore(holder.firstChild, hero.firstChild);
+    hero.insertBefore(holder.firstChild, hero.firstChild);
+    hero.insertBefore(holder.firstChild, hero.firstChild);
+  }
 
   function initNav() {
     var toggle = qs(".nav-toggle");
