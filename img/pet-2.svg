@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#f8f9fa"/>
+  <circle cx="200" cy="180" r="80" fill="#43a748" opacity="0.2"/>
+  <text x="200" y="200" font-family="Arial" font-size="80" fill="#43a748" text-anchor="middle">🐈</text>
+  <text x="200" y="320" font-family="Arial" font-size="18" fill="#1f2020" text-anchor="middle">Consulta</text>
+</svg>
