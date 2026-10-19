@@ -21,8 +21,8 @@ window.VETCENTER_CONFIG = {
     postalCode: "19470-043",
     full: "R. Fortaleza, 10-51 - Centro, Presidente Epitácio - SP, 19470-043",
     // Coordenadas confirmadas pelo cliente
-    lat: -21.76723633679676,
-    lng: -52.11200564078367
+    lat: -21.767505359884794,
+    lng: -52.112086106783515
   },
 
   /* --- Contato (confirmado) --- */
