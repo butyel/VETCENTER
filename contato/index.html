@@ -20,11 +20,14 @@
   <link rel="stylesheet" href="/style.css">
   <script src="/business-config.js" defer></script>
   <script src="/site-components.js" defer></script>
+<link rel="stylesheet" href="/refresh.css">
+<script src="/experience.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
   <div id="site-header" data-current="contato"></div>
 
-  <main>
+  <main id="main-content">
     <section class="page-hero">
       <div class="container">
         <nav class="breadcrumb" aria-label="Trilha de navegação">
@@ -124,7 +127,7 @@
               <label for="mensagem">Mensagem</label>
               <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?"></textarea>
             </div>
-            <button type="button" class="btn btn-primary btn-block" onclick="alert('Para enviar sua mensagem, ligue para (18) 3281-1035, chame no WhatsApp (18) 98174-5375 ou envie e-mail para contato@vetcenter.com.br.')">Enviar mensagem</button>
+            <button type="button" class="btn btn-primary btn-block" onclick="window.vetContact()">Continuar no WhatsApp ↗</button>
             <p class="form-hint">Prefere WhatsApp? Chame (18) 98174-5375 ou ligue para (18) 3281-1035.</p>
           </div>
         </div>

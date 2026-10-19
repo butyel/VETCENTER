@@ -15,11 +15,11 @@
 
   function renderHeader(current) {
     var links =
-      navLink("Início", C.baseUrl + "/index.html", current === "home") +
-      navLink("A VetCenter", C.baseUrl + "/sobre/index.html", current === "sobre") +
-      navLink("Serviços", C.baseUrl + "/servicos/index.html", current === "servicos") +
-      navLink("Conteúdos", C.baseUrl + "/blog/index.html", current === "blog") +
-      navLink("Contato", C.baseUrl + "/contato/index.html", current === "contato");
+      navLink("Início", "/index.html", current === "home") +
+      navLink("A VetCenter", "" + "/sobre/index.html", current === "sobre") +
+      navLink("Serviços", "" + "/servicos/index.html", current === "servicos") +
+      navLink("Conteúdos", "" + "/blog/index.html", current === "blog") +
+      navLink("Contato", "" + "/contato/index.html", current === "contato");
 
     var topRight = "";
     if (C.phone.whatsapp) topRight += '<a href="https://wa.me/' + C.phone.whatsapp.replace(/\D/g, "") + '" target="_blank" rel="noopener" class="top-link"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>';
@@ -39,12 +39,12 @@
       '</div>' +
       '<header class="site-header" id="site-header">' +
       '<div class="container header-inner">' +
-      '<a class="brand" href="' + C.baseUrl + '/index.html" aria-label="' + C.name + ' — Clínica Veterinária em Presidente Epitácio">' +
-      '<img class="brand-logo" src="' + C.baseUrl + '/img/logo.png" alt="' + C.name + ' — logo" width="180" height="56">' +
+      '<a class="brand" href="' + "" + '/index.html" aria-label="' + C.name + ' — Clínica Veterinária em Presidente Epitácio">' +
+      '<img class="brand-logo" src="' + "" + '/img/logo.png" alt="' + C.name + ' — logo" width="180" height="56">' +
       "</a>" +
       '<button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>' +
       '<nav class="primary-nav" id="primary-nav" aria-label="Navegação principal"><ul>' + links + "</ul></nav>" +
-      '<a class="btn btn-primary btn-header" href="' + C.baseUrl + '/contato/index.html">Agendar atendimento</a>' +
+      '<a class="btn btn-primary btn-header" href="' + "" + '/contato/index.html">Agendar atendimento</a>' +
       "</div>" +
       "</header>";
     return html;
@@ -65,28 +65,28 @@
       '<footer class="site-footer">' +
       '<div class="container footer-inner">' +
       '<div class="footer-col footer-about">' +
-      '<img class="footer-logo" src="' + C.baseUrl + '/img/logo%20branca.png" alt="' + C.name + '" width="180" height="56">' +
+      '<img class="footer-logo" src="' + "" + '/img/logo%20branca.png" alt="' + C.name + '" width="180" height="56">' +
       "<p>" + C.type + " atendendo cães e gatos no Centro de Presidente Epitácio, São Paulo. Consultas, vacinação, diagnóstico por imagem, Raio-X Digital, banho e tosa e Pet Shop.</p>" +
       '<div class="footer-social">' + social + "</div>" +
       "</div>" +
       '<div class="footer-col">' +
       "<h4>Navegação</h4>" +
       "<ul>" +
-      '<li><a href="' + C.baseUrl + '/index.html">Início</a></li>' +
-      '<li><a href="' + C.baseUrl + '/sobre/index.html">A VetCenter</a></li>' +
-      '<li><a href="' + C.baseUrl + '/servicos/index.html">Serviços</a></li>' +
-      '<li><a href="' + C.baseUrl + '/blog/index.html">Conteúdos</a></li>' +
-      '<li><a href="' + C.baseUrl + '/contato/index.html">Contato</a></li>' +
+      '<li><a href="' + "" + '/index.html">Início</a></li>' +
+      '<li><a href="' + "" + '/sobre/index.html">A VetCenter</a></li>' +
+      '<li><a href="' + "" + '/servicos/index.html">Serviços</a></li>' +
+      '<li><a href="' + "" + '/blog/index.html">Conteúdos</a></li>' +
+      '<li><a href="' + "" + '/contato/index.html">Contato</a></li>' +
       "</ul>" +
       "</div>" +
       '<div class="footer-col">' +
       "<h4>Serviços</h4>" +
       "<ul>" +
-      '<li><a href="' + C.baseUrl + '/servicos/consulta-veterinaria-presidente-epitacio/index.html">Consulta Veterinária</a></li>' +
-      '<li><a href="' + C.baseUrl + '/servicos/vacinacao-pet-presidente-epitacio/index.html">Vacinação</a></li>' +
-      '<li><a href="' + C.baseUrl + '/servicos/raio-x-veterinario-presidente-epitacio/index.html">Raio-X Digital</a></li>' +
-      '<li><a href="' + C.baseUrl + '/servicos/diagnostico-por-imagem-veterinario-presidente-epitacio/index.html">Diagnóstico por Imagem</a></li>' +
-      '<li><a href="' + C.baseUrl + '/servicos/banho-e-tosa-presidente-epitacio/index.html">Banho e Tosa</a></li>' +
+      '<li><a href="' + "" + '/servicos/consulta-veterinaria-presidente-epitacio/index.html">Consulta Veterinária</a></li>' +
+      '<li><a href="' + "" + '/servicos/vacinacao-pet-presidente-epitacio/index.html">Vacinação</a></li>' +
+      '<li><a href="' + "" + '/servicos/raio-x-veterinario-presidente-epitacio/index.html">Raio-X Digital</a></li>' +
+      '<li><a href="' + "" + '/servicos/diagnostico-por-imagem-veterinario-presidente-epitacio/index.html">Diagnóstico por Imagem</a></li>' +
+      '<li><a href="' + "" + '/servicos/banho-e-tosa-presidente-epitacio/index.html">Banho e Tosa</a></li>' +
       "</ul>" +
       "</div>" +
       '<div class="footer-col footer-contact-col">' +
@@ -154,7 +154,7 @@
     if (headerEl) headerEl.outerHTML = renderHeader(headerEl.getAttribute("data-current") || "");
     if (footerEl) footerEl.outerHTML = renderFooter();
     renderSchema();
-    injectPaws();
+
     initNav();
   });
 

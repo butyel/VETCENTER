@@ -22,20 +22,22 @@
   <script src="/business-config.js" defer></script>
   <script src="/site-components.js" defer></script>
   <link rel="preload" as="image" href="/img/hero-home-1024.webp" imagesrcset="/img/hero-home-720.webp 720w, /img/hero-home-1024.webp 1024w, /img/hero-home-1400.webp 1400w" imagesizes="(max-width: 880px) 92vw, 46vw">
+<link rel="stylesheet" href="/refresh.css">
+<script src="/experience.js" defer></script>
 </head>
-<body>
+<body class="home-page"><a class="skip-link" href="#main-content">Pular para o conteúdo</a>
   <div id="site-header" data-current="home"></div>
 
-  <main>
+  <main id="main-content">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-label="VetCenter em Presidente Epitácio">
       <div class="container hero-grid">
         <div class="hero-text">
           <span class="hero-eyebrow"><span class="dot"></span> Clínica Veterinária em Presidente Epitácio</span>
-          <h1>Clínica Veterinária em Presidente Epitácio para cuidar de cães e gatos</h1>
-          <p class="lead">Consultas, vacinação, diagnóstico por imagem, Raio-X Digital, banho e tosa e cuidados veterinários em um só lugar.</p>
+          <h1>Eles fazem parte da família.<br><em>Do nosso cuidado também.</em></h1>
+          <p class="lead">Da prevenção ao banho e tosa, um lugar para acompanhar cada fase da vida do seu cão ou gato. Conheça a VetCenter, no Centro de Presidente Epitácio.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="/contato/index.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Agendar atendimento</a>
+            <a class="btn btn-primary" href="#agendar"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Agendar atendimento</a>
             <a class="btn btn-outline" href="https://www.google.com/maps/place/R.+Fortaleza,+10-51+-+Centro,+Presidente+Epit%C3%A1cio+-+SP,+19470-043/@-21.7672363,-52.1120056,17z" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Como chegar</a>
           </div>
           <p class="hero-note">R. Fortaleza, 10-51 · Centro · Presidente Epitácio · SP · (18) 3281-1035</p>
@@ -45,7 +47,7 @@
             src="/img/hero-home-1024.webp"
             srcset="/img/hero-home-720.webp 720w, /img/hero-home-1024.webp 1024w, /img/hero-home-1400.webp 1400w"
             sizes="(max-width: 880px) 92vw, 46vw"
-            alt="Equipe da VetCenter cuidando de um cão e um gato em Presidente Epitácio"
+            alt="Equipe da VetCenter reunida na clínica em Presidente Epitácio"
             width="1024" height="768" fetchpriority="high">
           <div class="hero-badge">
             <div>
@@ -58,6 +60,7 @@
       </div>
     </section>
 
+    <section class="care-selector section" id="cuidados"><div class="container care-grid"><div><span class="kicker">Como podemos ajudar?</span><h2>Cada pet, um cuidado.<br>Encontre o seu.</h2><p>Escolha o que você procura e conheça o atendimento.</p></div><div><div class="care-tabs" role="group" aria-label="Escolha um cuidado"><button type="button" data-care="0" aria-pressed="true">Saúde e prevenção</button><button type="button" data-care="1" aria-pressed="false">Exames de imagem</button><button type="button" data-care="2" aria-pressed="false">Banho e tosa</button></div><div id="care-result" class="care-result" aria-live="polite"></div></div></div></section>
     <!-- PROVA SOCIAL -->
     <section class="proof-strip">
       <div class="container proof-inner">
@@ -230,6 +233,8 @@
       </div>
     </section>
 
+    <section class="section booking-section" id="agendar"><div class="container booking-grid"><div><span class="kicker">Vamos conversar</span><h2>O próximo cuidado<br>começa por aqui.</h2><p>Conte o que seu pet precisa. A mensagem será aberta no WhatsApp da clínica para combinar o atendimento.</p><p class="booking-note">O envio da mensagem não confirma um horário. A equipe verifica a disponibilidade com você.</p><a href="tel:+551832811035">Prefere ligar? (18) 3281-1035 ↗</a></div><form id="booking-form" class="booking-form"><label for="tutor">Seu nome</label><input id="tutor" name="tutor" autocomplete="given-name" placeholder="Como podemos chamar você?" required maxlength="80"><div class="booking-fields"><div><label for="pet">Nome do pet</label><input id="pet" name="pet" placeholder="Seu companheiro" maxlength="80"></div><div><label for="species">Seu pet é</label><select id="species" name="species"><option>Cão</option><option>Gato</option></select></div></div><label for="care-service">O que você procura?</label><select id="care-service" name="service"><option>Consulta Veterinária</option><option>Vacinação</option><option>Diagnóstico por Imagem</option><option>Raio-X Digital</option><option>Banho e Tosa</option><option>Pet Shop</option></select><button class="btn btn-primary" type="submit">Continuar no WhatsApp ↗</button></form></div></section>
+    <section class="section"><div class="container faq-layout"><div><span class="kicker">Antes da visita</span><h2>Ficou alguma dúvida?</h2></div><div><details><summary>Onde fica a VetCenter?</summary><p>R. Fortaleza, 10-51, Centro, Presidente Epitácio - SP. CEP 19470-043.</p></details><details><summary>Quais são os horários de atendimento?</summary><p>Segunda a sexta: 08h às 18h. Sábado: 08h às 12h. Domingo: fechado.</p></details><details><summary>Como entrar em contato em uma emergência?</summary><p>Ligue para <a href="tel:+5518981745375">(18) 98174-5375</a> e verifique a disponibilidade de atendimento.</p></details><details><summary>Como combinar uma consulta ou banho e tosa?</summary><p>Use o formulário acima para conversar no WhatsApp ou ligue para (18) 3281-1035. O horário é combinado diretamente com a equipe.</p></details></div></div></section>
     <!-- CTA -->
     <section class="section">
       <div class="container">
