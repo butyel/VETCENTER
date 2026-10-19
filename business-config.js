@@ -55,8 +55,8 @@ window.VETCENTER_CONFIG = {
 
   /* --- Avaliações Google --- */
   reviews: {
-    rating: "4,8",
-    count: "Mais de 70 avaliações",
+    rating: null,
+    count: null,
     googleUrl: "https://g.page/r/CS8i_YLsyWNtEBM/review",
     label: "Ver avaliações no Google"
   },
