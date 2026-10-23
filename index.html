@@ -10,7 +10,7 @@
   <meta property="og:title" content="VetCenter | Clínica Veterinária em Presidente Epitácio">
   <meta property="og:description" content="Clínica veterinária em Presidente Epitácio para cães e gatos. Consultas, vacinação, diagnóstico por imagem, Raio-X Digital, banho e tosa e mais.">
   <meta property="og:url" content="https://vetcenter-delta.vercel.app/">
-  <meta property="og:image" content="https://vetcenter-delta.vercel.app/img/hero-home-1024.webp">
+  <meta property="og:image" content="https://vetcenter-delta.vercel.app/img/vetcenter-fachada-1280.webp">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="VetCenter">
   <meta name="twitter:card" content="summary_large_image">
@@ -21,61 +21,35 @@
   <link rel="stylesheet" href="/style.css">
   <script src="/business-config.js" defer></script>
   <script src="/site-components.js" defer></script>
-  <link rel="preload" as="image" href="/img/hero-home-1024.webp" imagesrcset="/img/hero-home-720.webp 720w, /img/hero-home-1024.webp 1024w, /img/hero-home-1400.webp 1400w" imagesizes="(max-width: 880px) 92vw, 46vw">
+  <link rel="preload" as="image" href="/img/vetcenter-fachada-1280.webp">
+<link rel="stylesheet" href="/refresh.css">
+<script src="/experience.js" defer></script>
 </head>
-<body>
+<body class="home-page"><a class="skip-link" href="#main-content">Pular para o conteúdo</a>
   <div id="site-header" data-current="home"></div>
 
-  <main>
+  <main id="main-content">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-label="VetCenter em Presidente Epitácio">
       <div class="container hero-grid">
         <div class="hero-text">
           <span class="hero-eyebrow"><span class="dot"></span> Clínica Veterinária em Presidente Epitácio</span>
-          <h1>Clínica Veterinária em Presidente Epitácio para cuidar de cães e gatos</h1>
-          <p class="lead">Consultas, vacinação, diagnóstico por imagem, Raio-X Digital, banho e tosa e cuidados veterinários em um só lugar.</p>
+          <h1>Eles fazem parte da família.<br><em>Do nosso cuidado também.</em></h1>
+          <p class="lead">Da prevenção ao banho e tosa, um lugar para acompanhar cada fase da vida do seu cão ou gato. Conheça a VetCenter, no Centro de Presidente Epitácio.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="/contato/index.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Agendar atendimento</a>
-            <a class="btn btn-outline" href="https://www.google.com/maps/place/R.+Fortaleza,+10-51+-+Centro,+Presidente+Epit%C3%A1cio+-+SP,+19470-043/@-21.7672363,-52.1120056,17z" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Como chegar</a>
+            <a class="btn btn-primary" href="#agendar"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Agendar atendimento</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=-21.767505359884794,-52.112086106783515" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Como chegar</a>
           </div>
           <p class="hero-note">R. Fortaleza, 10-51 · Centro · Presidente Epitácio · SP · (18) 3281-1035</p>
         </div>
         <div class="hero-media">
-          <img
-            src="/img/hero-home-1024.webp"
-            srcset="/img/hero-home-720.webp 720w, /img/hero-home-1024.webp 1024w, /img/hero-home-1400.webp 1400w"
-            sizes="(max-width: 880px) 92vw, 46vw"
-            alt="Equipe da VetCenter cuidando de um cão e um gato em Presidente Epitácio"
-            width="1024" height="768" fetchpriority="high">
-          <div class="hero-badge">
-            <div>
-              <span class="stars">★★★★★</span>
-              <span class="num">4,8</span>
-              <small>no Google · mais de 70 avaliações</small>
-            </div>
-          </div>
+          <img src="/img/vetcenter-fachada-1280.webp" srcset="/img/vetcenter-fachada-640.webp 640w, /img/vetcenter-fachada-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 46vw" alt="Fachada da VetCenter na R. Fortaleza, em Presidente Epitácio" width="960" height="1280" fetchpriority="high">
         </div>
       </div>
     </section>
 
+    <section class="care-selector section" id="cuidados"><div class="container care-grid"><div><span class="kicker">Como podemos ajudar?</span><h2>Cada pet, um cuidado.<br>Encontre o seu.</h2><p>Escolha o que você procura e conheça o atendimento.</p></div><div><div class="care-tabs" role="group" aria-label="Escolha um cuidado"><button type="button" data-care="0" aria-pressed="true">Saúde e prevenção</button><button type="button" data-care="1" aria-pressed="false">Exames de imagem</button><button type="button" data-care="2" aria-pressed="false">Banho e tosa</button></div><div id="care-result" class="care-result" aria-live="polite"></div></div></div></section>
     <!-- PROVA SOCIAL -->
-    <section class="proof-strip">
-      <div class="container proof-inner">
-        <div class="proof-item">
-          <div class="stars">★★★★★</div>
-          <div class="value">4,8 no Google</div>
-          <div class="label">avaliação média de clientes</div>
-        </div>
-        <div class="proof-item">
-          <div class="value">+70</div>
-          <div class="label">avaliações no Google</div>
-        </div>
-        <div class="proof-item">
-          <div class="value">Presidente Epitácio</div>
-          <div class="label">atendimento local, no Centro</div>
-        </div>
-      </div>
-    </section>
 
     <!-- SERVIÇOS -->
     <section class="section">
@@ -130,7 +104,7 @@
     <section class="section section-soft">
       <div class="container feature">
         <div class="feature-media">
-          <img src="/img/hero-home-1024.webp" alt="Diagnóstico por imagem veterinário na VetCenter em Presidente Epitácio" loading="lazy" width="1024" height="768">
+          <img src="/img/vetcenter-raio-x-1280.webp" srcset="/img/vetcenter-raio-x-640.webp 640w, /img/vetcenter-raio-x-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 46vw" alt="Equipamento de Raio-X da VetCenter" width="1154" height="1280" loading="lazy">
         </div>
         <div>
           <span class="kicker">Diferencial</span>
@@ -190,12 +164,12 @@
           <a class="btn btn-outline" href="/sobre/index.html">Conhecer a VetCenter</a>
         </div>
         <div class="feature-media">
-          <img src="/img/hero-home-1400.webp" alt="Estrutura da clínica veterinária VetCenter em Presidente Epitácio" loading="lazy" width="1400" height="1050">
+          <img src="/img/vetcenter-recepcao-1280.webp" srcset="/img/vetcenter-recepcao-640.webp 640w, /img/vetcenter-recepcao-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 46vw" alt="Recepção e área de produtos da VetCenter" width="1280" height="960" loading="lazy">
         </div>
       </div>
     </section>
 
-    <!-- AVALIAÇÕES -->
+<section class="section photo-section"><div class="container"><span class="kicker">Por dentro da VetCenter</span><h2>Conheça nosso espaço</h2><p>Fotos da fachada, recepção e ambientes da clínica em Presidente Epitácio. Clique para ampliar.</p><div class="clinic-gallery"><figure><button class="gallery-photo" type="button" data-photo="/img/vetcenter-recepcao-1280.webp" data-caption="Recepção e área de produtos da VetCenter" aria-label="Ampliar foto: Recepção e área de produtos da VetCenter"><img src="/img/vetcenter-recepcao-1280.webp" srcset="/img/vetcenter-recepcao-640.webp 640w, /img/vetcenter-recepcao-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 46vw" alt="Recepção e área de produtos da VetCenter" width="1280" height="960" loading="lazy"></button><figcaption>Recepção e área de produtos da VetCenter</figcaption></figure><figure><button class="gallery-photo" type="button" data-photo="/img/vetcenter-raio-x-1280.webp" data-caption="Equipamento de Raio-X da VetCenter" aria-label="Ampliar foto: Equipamento de Raio-X da VetCenter"><img src="/img/vetcenter-raio-x-1280.webp" srcset="/img/vetcenter-raio-x-640.webp 640w, /img/vetcenter-raio-x-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 46vw" alt="Equipamento de Raio-X da VetCenter" width="1154" height="1280" loading="lazy"></button><figcaption>Equipamento de Raio-X da VetCenter</figcaption></figure><figure><button class="gallery-photo" type="button" data-photo="/img/vetcenter-consultorio-1280.webp" data-caption="Consultório veterinário da VetCenter" aria-label="Ampliar foto: Consultório veterinário da VetCenter"><img src="/img/vetcenter-consultorio-1280.webp" srcset="/img/vetcenter-consultorio-640.webp 640w, /img/vetcenter-consultorio-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 46vw" alt="Consultório veterinário da VetCenter" width="1280" height="960" loading="lazy"></button><figcaption>Consultório veterinário da VetCenter</figcaption></figure><figure><button class="gallery-photo" type="button" data-photo="/img/vetcenter-sala-atendimento-1280.webp" data-caption="Sala de atendimento da VetCenter" aria-label="Ampliar foto: Sala de atendimento da VetCenter"><img src="/img/vetcenter-sala-atendimento-1280.webp" srcset="/img/vetcenter-sala-atendimento-640.webp 640w, /img/vetcenter-sala-atendimento-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 46vw" alt="Sala de atendimento da VetCenter" width="1280" height="960" loading="lazy"></button><figcaption>Sala de atendimento da VetCenter</figcaption></figure></div></div></section>    <!-- AVALIAÇÕES -->
     <section class="section section-soft">
       <div class="container">
         <div class="section-head">
@@ -203,23 +177,16 @@
           <h2>Quem cuida, recomenda</h2>
           <p>Avaliações reais de clientes da VetCenter no Google.</p>
         </div>
-        <div class="review-summary">
-          <span class="big">4,8</span>
-          <span class="stars">★★★★★</span>
-        </div>
         <div class="review-grid">
           <article class="review-card">
-            <div class="stars">★★★★★</div>
             <p>"Ótimo atendimento, e recepção dos pets nota ótimo veterinário."</p>
             <div class="who">Rogerio Quirino <span>· Google</span></div>
           </article>
           <article class="review-card">
-            <div class="stars">★★★★★</div>
             <p>"Excelentes profissionais, Dr Danilo e toda equipe sempre muito atenciosos."</p>
             <div class="who">Thiago Ferreira <span>· Google</span></div>
           </article>
           <article class="review-card">
-            <div class="stars">★★★★★</div>
             <p>"Todos meus animais quando precisam do banho/tosa ou atendimento veterinário levo."</p>
             <div class="who">Heidi Christine Brand de Castro <span>· Google</span></div>
           </article>
@@ -230,6 +197,8 @@
       </div>
     </section>
 
+    <section class="section booking-section" id="agendar"><div class="container booking-grid"><div><span class="kicker">Vamos conversar</span><h2>O próximo cuidado<br>começa por aqui.</h2><p>Conte o que seu pet precisa. A mensagem será aberta no WhatsApp da clínica para combinar o atendimento.</p><p class="booking-note">O envio da mensagem não confirma um horário. A equipe verifica a disponibilidade com você.</p><a href="tel:+551832811035">Prefere ligar? (18) 3281-1035 ↗</a></div><form id="booking-form" class="booking-form"><label for="tutor">Seu nome</label><input id="tutor" name="tutor" autocomplete="given-name" placeholder="Como podemos chamar você?" required maxlength="80"><div class="booking-fields"><div><label for="pet">Nome do pet</label><input id="pet" name="pet" placeholder="Seu companheiro" maxlength="80"></div><div><label for="species">Seu pet é</label><select id="species" name="species"><option>Cão</option><option>Gato</option></select></div></div><label for="care-service">O que você procura?</label><select id="care-service" name="service"><option>Consulta Veterinária</option><option>Vacinação</option><option>Diagnóstico por Imagem</option><option>Raio-X Digital</option><option>Banho e Tosa</option><option>Pet Shop</option></select><button class="btn btn-primary" type="submit">Continuar no WhatsApp ↗</button></form></div></section>
+    <section class="section"><div class="container faq-layout"><div><span class="kicker">Antes da visita</span><h2>Ficou alguma dúvida?</h2></div><div><details><summary>Onde fica a VetCenter?</summary><p>R. Fortaleza, 10-51, Centro, Presidente Epitácio - SP. CEP 19470-043.</p></details><details><summary>Quais são os horários de atendimento?</summary><p>Segunda a sexta: 08h às 18h. Sábado: 08h às 12h. Domingo: fechado.</p></details><details><summary>Como entrar em contato em uma emergência?</summary><p>Ligue para <a href="tel:+5518981745375">(18) 98174-5375</a> e verifique a disponibilidade de atendimento.</p></details><details><summary>Como combinar uma consulta ou banho e tosa?</summary><p>Use o formulário acima para conversar no WhatsApp ou ligue para (18) 3281-1035. O horário é combinado diretamente com a equipe.</p></details></div></div></section>
     <!-- CTA -->
     <section class="section">
       <div class="container">
